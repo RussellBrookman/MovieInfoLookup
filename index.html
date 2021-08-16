@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>Favorite Movies</title>
-  <style type="text/css">
-    button,
-    div,
-    form,
-    input {
-      margin: 10px;
-    }
-  </style>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Favorite Movies</title>
+    <style type="text/css">
+      button, div, form, input {
+        margin: 10px;
+      }
+    </style>
+  </head>
 
 <body>
-
   <div class="container">
     <h1>Movie Search</h1>
-
-    <!-- Movies will Get Dropped here -->
+    <!-- Movies Get Dropped here -->
     <div id="movies-view"></div>
-
-    <!-- Rendered Buttons will get Dropped Here  -->
+    <!-- Rendered Buttons get Dropped Here  -->
     <div id="buttons-view"></div>
-
     <form id="movie-form">
       <label for="movie-input">Add some movies playa!</label>
       <input type="text" id="movie-input"><br>
-
       <!-- Button triggers new movie added -->
-      <input id="add-movie" type="submit" value="Add a Movie Bro">
+      <input id="add-movie" type="submit" value="Add a Movie Bio">
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
       // Initial array of movies
       var movies = ["The Terminator", "Charlie Wilson's War", "La La Land", "Uncle Buck"];
-
       // re-renders the HTML to display content
       function displayMovieInfo() {
 
         var movie = $(this).attr("data-name");
-        var queryURL = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=40e9cece";
+        var queryURL = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=fadd5754";
 
         // AJAX call for the movie button being clicked
         $.ajax({
